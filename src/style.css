@@ -77,13 +77,11 @@ img {
 }
 
 #online {
-    
     width: 175px;
 }
   
 #pics {
     position:relative;
-    top: 350px;
     left: 200px;
     margin: auto;
     width: 1000px;
@@ -91,7 +89,6 @@ img {
 
 #anime-roll {
     position:relative;
-    top: 150px;
     left: 700px;
 }
 
