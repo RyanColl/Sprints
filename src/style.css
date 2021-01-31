@@ -1,3 +1,4 @@
+
 :root {
     --clr-accent: #FFA800;
     --border: 5px var(--clr-accent);
@@ -5,7 +6,7 @@
 }
 
 body {
- height: 1200px;
+  height: 1200px;
 }
 
 .nav {
@@ -79,3 +80,20 @@ img {
     
     width: 175px;
 }
+  
+#pics {
+    position:relative;
+    top: 350px;
+    left: 200px;
+    margin: auto;
+    width: 1000px;
+}
+
+#anime-roll {
+    position:relative;
+    top: 150px;
+    left: 700px;
+}
+
+
+
