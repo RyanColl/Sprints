@@ -8,6 +8,13 @@ body {
     left: 200px;
     margin: auto;
     width: 1000px;
-  
 }
+
+#anime-roll {
+    position:relative;
+    top: 150px;
+    left: 700px;
+}
+
+
 
