@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Poiret+One|Sacramento');
 
 html {
@@ -41,32 +42,6 @@ img {
   transition-duration: 1s;
 }
 
-nav {
-  font-family: 'Poiret One';
-}
-
-nav ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-nav li {
-  color: lavenderblush;
-  background-color: lavenderblush;
-
-  margin: 0.5rem;
-  padding: 0.5rem;
-
-  border: 5px solid lavenderblush;
-
-  text-align: center;
-}
-
-nav a {
-  color: hotpink;
-  font-size: 1.3rem;
-  text-decoration: none;
-}
 img:hover {
   transform: scale(1.10);
   transition: 1s;
@@ -82,11 +57,7 @@ img:hover {
     grid-template-rows: 300px auto auto;
   }
 
-  nav ul {
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-  }
+ 
 
   main {
     /* GRID */
@@ -109,22 +80,6 @@ img:hover {
     text-align: left;
   }
 
-  nav ul li {
-    text-align: center;
-    transition-duration: 1s;
-    transition: 
-    border-top-color 1s,
-    border-right-color 1s 0.25s,
-    border-bottom-color 1s 0.5s,
-    border-left-color 1s 0.75s;
-  }
-
-  nav ul li:hover {
-    border-top-color:hotpink ;
-    border-right-color:hotpink;
-    border-bottom-color:hotpink;
-    border-left-color:hotpink;
-  }
 
   section {
     margin: 0.5rem;
@@ -189,3 +144,98 @@ img:hover {
     background-position: 412px;
   }
 }
+
+:root {
+    --clr-accent: #FFA800;
+    --border: 5px var(--clr-accent);
+
+}
+
+body {
+  height: 1200px;
+}
+
+.nav {
+    height: 125px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    border-style: solid dashed;
+    border-top-width: 0;
+}
+
+#nav_wrapper {
+    height:80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    width: 90%;
+    height: 90%;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.item {
+
+    padding: 25px 0px 25px 0px;
+    width: 125px;
+}
+a {
+    
+    font-family: 'Times New Roman', Times, sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: black;
+}
+a:hover {
+    font-family: 'Times New Roman', Times, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: black;
+}
+img {
+    width: 100%;
+}
+#first {
+    width: 100px;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+
+#online {
+    width: 175px;
+}
+  
+#pics {
+    position:relative;
+    left: 200px;
+    margin: auto;
+    width: 1000px;
+}
+
+#anime-roll {
+    position:relative;
+    left: 700px;
+}
+
+
