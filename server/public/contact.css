@@ -1,0 +1,20 @@
+#modal {
+    display: none;
+
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("/server/public/img/map.png");
+}
+.left {
+    grid-row: 1/2;
+    display:grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.right {
+    background-color: coral;
+    grid-row: 2/3;
+    display:grid;
+    grid-template-rows: repeat(4, 1fr);
+}
