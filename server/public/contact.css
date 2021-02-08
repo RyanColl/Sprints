@@ -1,24 +1,191 @@
 #modal {
-    display: none;
-    width: 400px;
-    height: 500px;
-    position: sticky;
-    top:50%;
-    left: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(59, 58, 58, 0.8);
+
 }
+
 #wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-image: url("/server/public/img/map.png");
+    height: 60%;
+    width: 60%;
+    background-color: white;
 }
 .left {
-    grid-row: 1/2;
+    grid-column: 1/2;
     display:grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+.left > .first {
+    grid-row: 1/2;
+    padding: 10px 50px 0px 50px;
+    font-size: 1.2rem;
+}
+.left > .first > .ptag {
+    margin-top: -10px;
+}
+.left > .second {
+    grid-row: 2/3;
+    display:grid;
+    grid-template-columns: 2.5fr 7.5fr;
+    font-size: 1.05rem;
+}
+.left > .second > img {
+    width: 78%;
+    margin: 10px 0px 0px 20px;
+    grid-column: 1/2;
+}
+.left > .second > .p {
+    grid-column: 2/3;
+}
+.left > .third {
+    grid-row: 3/4;
+    display:grid;
+    grid-template-columns: 2.5fr 7.5fr;
+    font-size: 1.05rem;
+}
+.left > .third > img {
+    width: 78%;
+    margin: 10px 0px 0px 20px;
+    grid-column: 1/2;
+}
+.left > .third > .p {
+    grid-column: 2/3;
+}
+.left > .fourth {
+    grid-row: 4/5;
+    display:grid;
+    grid-template-columns: 2.5fr 7.5fr;
+    font-size: 1.05rem;
+}
+.left > .fourth > img {
+    width: 88%;
+    margin: 10px 0px 0px 10px;
+    grid-column: 1/2;
+}
+.left > .fourth > .p {
+    grid-column: 2/3;
 }
 .right {
     background-color: coral;
-    grid-row: 2/3;
+    grid-column: 2/3;
+    height: 567px;
+}
+form {
     display:grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 31px 100px 100px 236px 100px;   
+}
+.border {
+    display: grid;
+    grid-template-columns: 5.35fr 4.65fr;
+    background-image: url("img/map25medium1.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    object-fit: fill;
+}
+
+.img {
+    width: 25px;
+    height: 25px;   
+}
+.right > form > .first {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+}
+.right > form > .second {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    background-color: coral;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    position:relative;
+    top: 0px;
+    left: 0px;
+    margin-top: 25px;
+    margin-left: -25px;
+}
+.name {
+    width:  280px;
+    height: 65px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px 0px 0px 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-name {
+    padding: 5px;
+    border: 0px;
+    background-color: coral;
+    
+}
+#input-email {
+    padding: 5px;
+    border: 0px;
+    background-color: coral;
+}
+#input-name::placeholder {
+    color: white;
+}
+#input-name:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+#input-name::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+#input-email::placeholder {
+    color: white;
+}
+#input-email:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+#input-email::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+
+.right > form > .third {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email {
+    width:  280px;
+    height: 65px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px 0px 0px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right > form > .fourth {
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-msg {
+    padding: 5px;
+    border: 0px;
+    background-color: coral;
+}
+.msg {
+    width: 280px;
+    height: 230px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px 0px 0px 35px;
+    padding: 15px 0px 0px 15px;
 }
