@@ -19,11 +19,25 @@
                 $("#input-name").click(function() {
                     $("#input-name").attr("placeholder", "")
                 })
+                $("#input-name").blur(function() {
+                    $("#input-name").attr("placeholder", "FULL NAME")
+                })
                 $("#input-email").click(function() {
                     $("#input-email").attr("placeholder", "")
                 })
+                $("#input-email").blur(function() {
+                    $("#input-email").attr("placeholder", "EMAIL")
+                })
                 $("#input-msg").click(function() {
                     $("#input-msg").attr("placeholder", "")
+                })  
+                $("#input-msg").blur(function() {
+                    $("#input-msg").attr("placeholder", "MESSAGE")
+                })
+                $("#input-submit").on("submit", function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    fetch("index.js")
                 })                                                                                                             
             })
          })
@@ -109,7 +123,7 @@
                 </div>
             </div>
             <div class="right">
-                <form method="POST" action="formdata.html">
+                <form method="POST" action="formData">
                     <div class="first">
                         <a class="close" href="#"><img class="img" src="img/exit.png" alt="exit" ></a>
                     </div>
@@ -126,11 +140,13 @@
                     </div>
                     <div class="fourth">
                         <div class="msg">
-                            <input id="input-msg" name="message" type="text" placeholder="MESSAGE" required>
+                            <textarea id="input-msg" name="message" type="text" placeholder="MESSAGE" required></textarea>
                         </div>
                     </div>
                     <div class="fifth">
-
+                        <div class="submit">
+                            <input id="input-submit" type="submit" value="SEND MESSAGE">
+                        </div>
                     </div>
                 </form> 
             </div>
