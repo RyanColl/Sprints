@@ -9,8 +9,10 @@
 }
 
 #wrapper {
+    position: fixed;
+    top: 75px;
     height: 60%;
-    width: 60%;
+    width: 70%;
     background-color: white;
 }
 .left {
@@ -84,6 +86,7 @@ form {
     grid-template-rows: 31px 100px 100px 236px 100px;   
 }
 .border {
+    width: 850px;
     display: grid;
     grid-template-columns: 5.35fr 4.65fr;
     background-image: url("img/map25medium1.png");
