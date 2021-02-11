@@ -7,10 +7,8 @@
     background-color: rgba(59, 58, 58, 0.8);
 
 }
-
 #wrapper {
-    position: fixed;
-    top: 75px;
+
     height: 60%;
     width: 70%;
     background-color: white;
@@ -126,6 +124,9 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+input {
+   color: coral;
 }
 #input-name {
     padding: 5px;

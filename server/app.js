@@ -14,7 +14,8 @@ app.get("/", (req, res) => {
    res.render("pages/index", {})
 })
 app.post('/formData', function (req, res) {
-    res.render('pages/somefile', { name: req.body.name, email: req.body.email, message: req.body.message });
+    let newDAta = req.body.name + "you two";
+    res.render('pages/somefile', { name: newDAta, email: req.body.email, message: req.body.message });
 });
 app.post("/myform", (req, res) => { // GET HTML form data from browser to server
     let formData = req.body;
