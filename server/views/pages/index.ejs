@@ -35,10 +35,13 @@
                     $("#input-msg").attr("placeholder", "MESSAGE")
                 })
                 $("#input-submit").on("submit", function (e) {
-                    e.preventDefault();
-                    const formData = new FormData(this);
-                    fetch("index.js")
-                })                                                                                                             
+                    // e.preventDefault();
+                    // const formData = new FormData(this);
+                    
+                })       
+                $(".close").on("click", () => {
+                    $("#modal").css("display", "none");
+                })                                                                                                      
             })
          })
     </script>

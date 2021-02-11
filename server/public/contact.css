@@ -8,6 +8,7 @@
 
 }
 #wrapper {
+    
     height: 60%;
     width: 60%;
     background-color: white;
@@ -122,6 +123,9 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+input {
+   color: coral;
 }
 #input-name {
     padding: 5px;
