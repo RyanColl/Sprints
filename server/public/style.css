@@ -22,7 +22,7 @@ h3 {
 }
 
 body {
-  background-image: url('images/inspiration-geometry.png');
+  background-image: url('img/inspiration-geometry.png');
   animation: animate-background linear 15s infinite;
 }
 

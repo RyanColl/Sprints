@@ -4,27 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');</style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <script defer>
-         $(function () {
-             $("document").ready(function() {
-                 $("#modal").hide()
-             })
-             console.log('working')
-            $(".contact").on("click", function() {
-                $("#modal").fadeIn(0)
-                console.log("still working")
+         $(function() {
+            $("document").ready(function() {
+                $("#modal").css("display", "none")
+                $(".contact").on("click", function() {
+                    $("#modal").css("display", "flex")
+                    $("#modal").css("justify-content", "center")
+                    $("#modal").css("align-items", "center")
+                })
+                $("#input-name").click(function() {
+                    $("#input-name").attr("placeholder", "")
+                })
+                $("#input-name").blur(function() {
+                    $("#input-name").attr("placeholder", "FULL NAME")
+                })
+                $("#input-email").click(function() {
+                    $("#input-email").attr("placeholder", "")
+                })
+                $("#input-email").blur(function() {
+                    $("#input-email").attr("placeholder", "EMAIL")
+                })
+                $("#input-msg").click(function() {
+                    $("#input-msg").attr("placeholder", "")
+                })  
+                $("#input-msg").blur(function() {
+                    $("#input-msg").attr("placeholder", "MESSAGE")
+                })
+                $("#input-submit").on("submit", function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    fetch("index.js")
+                })                                                                                                             
             })
-            
-
-
-
          })
     </script>
     <title>Sushi GO</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <div id="nav" class="nav">
         <div id="nav_wrapper">
             <ul class="list" data-count="7">
@@ -46,7 +67,6 @@
 		<main>
 			<section class="featured">
 				<h2>Featured Images</h2>
-
 				<img src="img/sushi photo 6.jpeg" alt="sushi photo 6">
 				<img src="img/sushi photo 7.jpeg" alt="sushi photo 7">
 				<img src="img/sushi photo 8.jpeg" alt="sushi photo 8">
@@ -54,7 +74,6 @@
 
 			<section class="gallery">
 				<h2>Image Gallery</h2>
-
 				<img src="img/sushi photo 1.jpeg" alt="sushi photo 1">
 				<img src="img/sushi photo 2.jpeg" alt="sushi photo 2">
 				<img src="img/sushi photo 3.jpeg" alt="sushi photo 3">
@@ -68,29 +87,69 @@
         <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sca!4v1612057040376!5m2!1sen!2sca!6m8!1m7!1swYHZbCJyULkfBa7-X79xnw!2m2!1d49.2879652326015!2d-123.1240339409279!3f108.43532387009249!4f-7.540486817197419!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </div>  
-  <div id="modal contact-us">
+  <div id="modal">
     <div id=wrapper>
-        <div class="left">
-            <div class="first">
-                <h3 class="header">
-                    Contact Form!
-                </h3>
-                <p class="ptag">
-                    This is our contact form!
-                </p>
+        <div class="border">
+            <div class="left">
+                <div class="first">
+                    <h4 class="header">
+                        Let's get in touch
+                    </h3>
+                    <p class="ptag">
+                        We're open for any inquiries.
+                    </p>
+                </div>
+                <div class="second">
+                    <img src="img/phone.png" alt="phone">
+                    <div class="p">
+                        <p>1.800.753.8855</p>
+                        <p>604.677.4758</p>
+                    </div>
+                </div>
+                <div class="third">
+                    <img src="img/email.png" alt="email">
+                    <div class="p">
+                        <p>sushigo@gmail.com</p>
+                        <p>orders.sushigo@gmail.com</p>
+                    </div>
+                </div>
+                <div class="fourth">
+                    <img src="img/pin.png" alt="pin">
+                    <div class="p">
+                        <p>570 Bute st</p>
+                        <p>Vancouver, BC</p>
+                        <p>V6E 4T7</p>
+                    </div>
+                </div>
             </div>
-            <div class="second">
-                <img>
+            <div class="right">
+                <form method="POST" action="formData">
+                    <div class="first">
+                        <a class="close" href="#"><img class="img" src="img/exit.png" alt="exit" ></a>
+                    </div>
+                    <div class="second">
+                        <div class="box"></div>
+                        <div class="name">
+                            <input id="input-name" name="name" type="text" placeholder="FULL NAME" required>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="email">
+                            <input id="input-email" name="email" type="text" placeholder="EMAIL" required>
+                        </div>
+                    </div>
+                    <div class="fourth">
+                        <div class="msg">
+                            <textarea id="input-msg" name="message" type="text" placeholder="MESSAGE" required></textarea>
+                        </div>
+                    </div>
+                    <div class="fifth">
+                        <div class="submit">
+                            <input id="input-submit" type="submit" value="SEND MESSAGE">
+                        </div>
+                    </div>
+                </form> 
             </div>
-            <div class="third">
-
-            </div>
-            <div class="fourth">
-
-            </div>
-        </div>
-        <div class="right">
-
         </div>
     </div>
 </div>   
